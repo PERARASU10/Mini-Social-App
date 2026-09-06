@@ -67,4 +67,13 @@ router.get("/me", requireAuth, (req, res) => {
   res.json({ user: publicUser(req.user) });
 });
 
+router.get("/test", (req, res) => {
+  res.json({
+    message: "AUTH ROUTER IS RUNNING",
+    signup: "POST /api/auth/signup",
+    login: "POST /api/auth/login"
+  });
+});
+
+
 export default router;
